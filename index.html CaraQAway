@@ -8,7 +8,7 @@
 <title>CaraQAway – Live Mock Preview</title>
 <style>
   :root {
-    --blue-50: #eff6ff;
+    --blue
     --pink-500: #ec4899;
     --pink-600: #db2777;
     --card-bg: rgba(255,255,255,0.92);
@@ -81,28 +81,23 @@
           <p>“Consistency compounds.”</p>
         </blockquote>
       </div>
-    <<section id="inspiration" class="section">
+    </div> <!-- close grid-2 -->
+  </div> <!-- close card -->
+</section>
+
+<section id="inspiration" class="section">
   <div class="card">
     <h2 class="h2">Inspiration & Focus</h2>
     <div class="grid-2">
       <div class="card">
         <strong>Focus</strong>
-        <p class="muted">
-          Begin with what you have, where you are. The start matters most—no progress exists without it.
-          Protect your attention and take the next small, clear step.
-        </p>
+        <p class="muted">Begin with what you have, where you are. The start matters most—no progress exists without it. Protect your attention and take the next small, clear step.</p>
       </div>
       <div class="card">
         <strong>Follow Through</strong>
-        <p class="muted">
-          Consistency writes the ending. Keep moving, even when momentum dips.
-          Finishes aren’t final; they’re proof that your will outlasts the hard parts.
-        </p>
+        <p class="muted">Consistency writes the ending. Keep moving, even when momentum dips. Finishes aren’t final; they’re proof that your will outlasts the hard parts.</p>
       </div>
     </div>
-  </div>
-</section>
-/div>
   </div>
 </section>
 
@@ -200,9 +195,7 @@
 
     <!-- Bug Jams (ordered 1 → 6) -->
     <section id="bugjam" class="section">
-      <div class="card">
-        <h2 class="h2">Tripleten Bug Jams</h2>
-        <div class="grid-3 bug-grid">
+      https://www.canva.com/design/DAGl-VYjmPM/46R3ON1tysZpQhudPAnkdg/edit
           <a class="bug-card" href="https://www.cancanvava.com/design/DAGl-VYjmPM/46R3ON1tysZpQhudPAnkdg/edit" target="_blank" rel="noreferrer">
             <img src="/mnt/data/tech_images/bugjam-1.png" alt="tech" />
             <h3>Tripleten Bug Jam 1</h3>
@@ -279,8 +272,12 @@
     <a href="#types">types</a>
     <a href="#externship">externship</a>
     <a href="#bugjam">bugjam</a>
-    <a href<a href="#inspiration">inspiration</a>
-    </nav>
+    <a href="#inspiratio<a href="https://export-download.canva.com/VQdQw/DAGqubVQdQw/173/0-2551771076079144635.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251018%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251018T230435Z&X-Amz-Expires=90016&X-Amz-Signature=2b22a892579bedf52c1e7fda16f494539ab64c4696eefc83abb01072aebb8254&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27EX14%2520Runestone%2520Academy%2520Final%2520Presentation.pdf&response-expires=Mon%2C%2020%20Oct%202025%2000%3A04%3A51%20GMT" target="_blank" rel="noopener">
+  externship presentation
+</a>
+
+
+  </nav>
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>

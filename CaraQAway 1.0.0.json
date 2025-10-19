@@ -1,11 +1,18 @@
-vercel.json
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
-      ]
-    }
-  ]
+  "vercel.json": {
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        ]
+      }
+    ]
+  },
+  "package.json": {
+    "name": "CaraQAway",
+    "version": "1.0.0",
+    "description": "Static site for CaraQAway",
+    "main": "index.html"
+  }
 }
