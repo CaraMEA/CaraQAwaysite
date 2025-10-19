@@ -249,7 +249,8 @@
     <section id="about" class="section">
       <div class="card">
         <div class="stack">
-          <img class="avatar" src="/mnt/data/642bab39-e3f9-44a5-b634-4baa57f651d9.png" alt="Cara profile photo" />
+          <img class="avatar" src="images/avatar.png" alt="Cara profile photo" />
+
           <div>
             <h2 class="h2">About Me</h2>
             <p class="muted">I’m Cara, a QA Engineer who took the scenic route into tech. From years of landscaping to leading test automation, I turned grit into growth. Through persistence and curiosity, I transitioned careers and now uplift others — especially women and career‑changers — who are rewriting their stories in technology.</p>
