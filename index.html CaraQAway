@@ -57,13 +57,68 @@
       <a href="#aboutqa" class="cta">Explore QA</a>
     </div>
   </header>
+  <section id="quotes" class="section">
+  <div class="card">
+    <h2 class="h2">Quotes I Work By</h2>
+    <div class="grid-2">
+      <div class="card">
+        <blockquote>
+          <p>“Start small. Start now.”</p>
+        </blockquote>
+      </div>
+      <div class="card">
+        <blockquote>
+          <p>“Progress beats perfection.”</p>
+        </blockquote>
+      </div>
+      <div class="card">
+        <blockquote>
+          <p>“Focus is a choice you re-make daily.”</p>
+        </blockquote>
+      </div>
+      <div class="card">
+        <blockquote>
+          <p>“Consistency compounds.”</p>
+        </blockquote>
+      </div>
+    <<section id="inspiration" class="section">
+  <div class="card">
+    <h2 class="h2">Inspiration & Focus</h2>
+    <div class="grid-2">
+      <div class="card">
+        <strong>Focus</strong>
+        <p class="muted">
+          Begin with what you have, where you are. The start matters most—no progress exists without it.
+          Protect your attention and take the next small, clear step.
+        </p>
+      </div>
+      <div class="card">
+        <strong>Follow Through</strong>
+        <p class="muted">
+          Consistency writes the ending. Keep moving, even when momentum dips.
+          Finishes aren’t final; they’re proof that your will outlasts the hard parts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+/div>
+  </div>
+</section>
+
+
 
   <main class="container reserve">
     <!-- QA briefly -->
     <section id="aboutqa" class="section">
       <div class="card">
         <h2 class="h2">QA, briefly</h2>
-        <p class="muted">Quality Assurance builds trust in software. It prevents bugs, checks systems, and keeps technology reliable for everyone.</p>
+        <p class="muted">
+  <strong>QA is how we keep promises to users.</strong>
+  It turns “it should work” into “it does work” through thoughtful tests, curious exploration,
+  and clear feedback that helps the whole team move faster with confidence.
+</p>
+
         <div class="spacer"></div>
         <div class="grid-2">
           <div class="card"><strong>🕒 Shift‑left testing</strong><p class="muted">Plan and write tests early so issues are caught before merge.</p></div>
@@ -223,8 +278,8 @@
     <a href="#types">types</a>
     <a href="#externship">externship</a>
     <a href="#bugjam">bugjam</a>
-    <a href="#about">about</a>
-  </nav>
+    <a href<a href="#inspiration">inspiration</a>
+    </nav>
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
