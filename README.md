@@ -52,4 +52,22 @@ CaraQAway simplifies complex QA concepts, highlights best practices, and shares 
 
 ## 📁 Project Structure
 
+CaraQAway/
+├── index.html                 # Main website file
+├── images/                    # Image assets for hero, bug jams, and profile
+│   ├── avatar.png
+│   ├── hero-tech-1.jpg
+│   ├── hero-tech-2.jpg
+│   ├── hero-tech-3.jpg
+│   ├── bugjam-1.png
+│   ├── bugjam-3.png
+│   └── bugjam-4.png
+├── css/
+│   └── style.css              # Site-wide styling
+├── scripts/
+│   └── main.js                # (Optional) interactivity or enhancements
+├── README.md
+└── vercel.json                # (Optional) Vercel config file if added
+
+
 
