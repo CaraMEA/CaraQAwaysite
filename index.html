@@ -29,13 +29,19 @@
   .muted { color:#000; opacity: .9; }
   .grid-2 { display:grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
   .grid-3 { display:grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+
+  /* gallery / bug cards */
+  .bug-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
   .bug-grid img, .gallery img { width:100%; height:160px; object-fit:cover; border-radius: 14px; border:1px solid var(--border); box-shadow: 0 8px 18px rgba(2,6,23,.06); }
   .bug-card { display:block; text-decoration:none; color:inherit; }
   .bug-card h3 { margin: 8px 0 4px; font-size: 16px; font-weight: 700; }
   .btn-link { display:inline-block; margin-top:8px; background: var(--pink-500); color:#fff; text-decoration:none; padding:8px 12px; border-radius:12px; font-weight:700; }
   .btn-link:hover { background: var(--pink-600); }
-  .stack { display:flex; gap:16px; align-items:center; }
-  .avatar { width: 88px; height: 88px; border-radius: 18px; object-fit:cover; box-shadow: 0 10px 22px rgba(2,6,23,.1); border:1px solid var(--border); }
+
+  .stack { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  /* avatar (circle, larger) */
+  .avatar { width: 220px; height: 220px; border-radius: 50%; object-fit:cover; box-shadow: 0 10px 22px rgba(2,6,23,.1); border:3px solid #f0f4f8; display:block; }
+
   .spacer { height: 18px; }
   footer { text-align:center; padding: 30px 0; color:#334155; font-size: 14px; }
   .rail { position: fixed; right: 56px; bottom: 18px; display:flex; flex-direction:column; gap:10px; z-index: 50; }
@@ -48,60 +54,43 @@
   <header class="hero">
     <div class="container reserve">
       <h1 class="title">CaraQAway</h1>
-      <p class="subtitle">The basic info about QA Assurance in a tech aspect</p>
+      <p class="subtitle">Welcome — I’m Cara. This is a calm, friendly guide to QA: how we find bugs, build trust, and ship with confidence.</p>
       <div class="techbar">
-        <img src="images/hero-tech-1.jpg" alt="server racks"/>
-        <img src="images/hero-tech-2.jpg" alt="circuit board"/>
-        <img src="images/hero-tech-3.jpg" alt="program code"/>
+        <img src="images/qa-hero-1.jpg" alt="QA hero visual 1"/>
+        <img src="images/qa-hero-2.jpg" alt="QA hero visual 2"/>
+        <img src="images/qa-hero-3.jpg" alt="QA hero visual 3"/>
       </div>
       <a href="#aboutqa" class="cta">Explore QA</a>
     </div>
   </header>
-  <section id="quotes" class="section">
-  <div class="card">
-    <h2 class="h2">Quotes I Work By</h2>
-    <div class="grid-2">
-      <div class="card">
-        <blockquote>
-          <p>“Start small. Start now.”</p>
-        </blockquote>
-      </div>
-      <div class="card">
-        <blockquote>
-          <p>“Progress beats perfection.”</p>
-        </blockquote>
-      </div>
-      <div class="card">
-        <blockquote>
-          <p>“Focus is a choice you re-make daily.”</p>
-        </blockquote>
-      </div>
-      <div class="card">
-        <blockquote>
-          <p>“Consistency compounds.”</p>
-        </blockquote>
-      </div>
-    </div> <!-- close grid-2 -->
-  </div> <!-- close card -->
-</section>
 
-<section id="inspiration" class="section">
-  <div class="card">
-    <h2 class="h2">Inspiration & Focus</h2>
-    <div class="grid-2">
-      <div class="card">
-        <strong>Focus</strong>
-        <p class="muted">Begin with what you have, where you are. The start matters most—no progress exists without it. Protect your attention and take the next small, clear step.</p>
-      </div>
-      <div class="card">
-        <strong>Follow Through</strong>
-        <p class="muted">Consistency writes the ending. Keep moving, even when momentum dips. Finishes aren’t final; they’re proof that your will outlasts the hard parts.</p>
+  <section id="quotes" class="section">
+    <div class="card container">
+      <h2 class="h2">Quotes I Work By</h2>
+      <div class="grid-2">
+        <div class="card"><blockquote><p>“Start small. Start now.”</p></blockquote></div>
+        <div class="card"><blockquote><p>“Progress beats perfection.”</p></blockquote></div>
+        <div class="card"><blockquote><p>“Focus is a choice you re-make daily.”</p></blockquote></div>
+        <div class="card"><blockquote><p>“Consistency compounds.”</p></blockquote></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
+  <section id="inspiration" class="section">
+    <div class="card container">
+      <h2 class="h2">Inspiration & Focus</h2>
+      <div class="grid-2">
+        <div class="card">
+          <strong>Focus</strong>
+          <p class="muted">Begin with what you have, where you are. The start matters most—no progress exists without it. Protect your attention and take the next small, clear step.</p>
+        </div>
+        <div class="card">
+          <strong>Follow Through</strong>
+          <p class="muted">Consistency writes the ending. Keep moving, even when momentum dips. Finishes aren’t final; they’re proof that your will outlasts the hard parts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main class="container reserve">
     <!-- QA briefly -->
@@ -109,16 +98,16 @@
       <div class="card">
         <h2 class="h2">QA, briefly</h2>
         <p class="muted">
-  <strong>QA is how we keep promises to users.</strong>
-  It turns “it should work” into “it does work” through thoughtful tests, curious exploration,
-  and clear feedback that helps the whole team move faster with confidence.
-</p>
+          <strong>QA is how we keep promises to users.</strong>
+          It turns “it should work” into “it does work” through thoughtful tests, curious exploration,
+          and clear feedback that helps the whole team move faster with confidence.
+        </p>
 
         <div class="spacer"></div>
         <div class="grid-2">
-          <div class="card"><strong>🕒 Shift‑left testing</strong><p class="muted">Plan and write tests early so issues are caught before merge.</p></div>
+          <div class="card"><strong>🕒 Shift-left testing</strong><p class="muted">Plan and write tests early so issues are caught before merge.</p></div>
           <div class="card"><strong>🔺 Automation pyramid</strong><p class="muted">Lots of unit tests, some integration, a few E2E for balance.</p></div>
-          <div class="card"><strong>🔍 Exploratory testing</strong><p class="muted">Hands‑on discovery to find issues scripts miss.</p></div>
+          <div class="card"><strong>🔍 Exploratory testing</strong><p class="muted">Hands-on discovery to find issues scripts miss.</p></div>
           <div class="card"><strong>🚧 CI quality gates</strong><p class="muted">Automated checks block unstable code from shipping.</p></div>
         </div>
       </div>
@@ -146,6 +135,7 @@
       <div class="card">
         <h2 class="h2">30 Common Testing Types</h2>
         <div class="grid-3">
+          <!-- (content unchanged) -->
           <div class="card"><strong>Unit</strong><p class="muted">Test a single function/class in isolation.</p></div>
           <div class="card"><strong>Integration</strong><p class="muted">Verify components work together.</p></div>
           <div class="card"><strong>System</strong><p class="muted">Test the whole app as one unit.</p></div>
@@ -156,7 +146,7 @@
           <div class="card"><strong>Performance</strong><p class="muted">Speed, responsiveness, stability.</p></div>
           <div class="card"><strong>Load</strong><p class="muted">Behavior under expected traffic.</p></div>
           <div class="card"><strong>Stress</strong><p class="muted">Behavior under extreme traffic.</p></div>
-          <div class="card"><strong>Soak</strong><p class="muted">Long‑duration stability under load.</p></div>
+          <div class="card"><strong>Soak</strong><p class="muted">Long-duration stability under load.</p></div>
           <div class="card"><strong>Security</strong><p class="muted">Find and prevent vulnerabilities.</p></div>
           <div class="card"><strong>Penetration</strong><p class="muted">Ethical hacking to exploit weaknesses.</p></div>
           <div class="card"><strong>Fuzz</strong><p class="muted">Random inputs to trigger crashes.</p></div>
@@ -186,48 +176,56 @@
     <section id="externship" class="section">
       <div class="card">
         <h2 class="h2">Tripleten Externship</h2>
-        <p class="muted">I completed my first automation project during a 7‑week externship with Tripleten, collaborating with Runestone Academy. Real‑world QA, real deadlines, real growth.</p>
-        <a class="btn-link" href="https://www..com/design/DAGik9LQEKo/lcMBQhDx3G3UECV2iG_Xow/edit" target="_blank" rel="noreferrer">View Externship ↗</a>
+        <p class="muted">I completed my first automation project during a 7-week externship with Tripleten, collaborating with Runestone Academy. Real-world QA, real deadlines, real growth.</p>
+        <!-- You can swap this link to the PDF if you have it handy -->
+        <a class="btn-link" href="https://www.canva.com/design/DAGik9LQEKo/lcMBQhDx3G3UECV2iG_Xow/edit" target="_blank" rel="noopener">View Externship ↗</a>
       </div>
     </section>
 
     <div class="spacer"></div>
 
-    <!-- Bug Jams (ordered 1 → 6) -->
+    <!-- Bug Jams -->
     <section id="bugjam" class="section">
-      https://www.canva.com/design/DAGl-VYjmPM/46R3ON1tysZpQhudPAnkdg/edit
-          <a class="bug-card" href="https://www.cancanvava.com/design/DAGl-VYjmPM/46R3ON1tysZpQhudPAnkdg/edit" target="_blank" rel="noreferrer">
-            <img src="/mnt/data/tech_images/bugjam-1.png" alt="tech" />
+      <div class="card">
+        <h2 class="h2">Bug Jam Projects</h2>
+        <div class="bug-grid">
+          <a class="bug-card" href="https://www.canva.com/design/DAGl-VYjmPM/46R3ON1tysZpQhudPAnkdg/edit" target="_blank" rel="noopener">
+            <img src="images/qa-kanban-1.jpg" alt="Bug Jam 1 — kanban board" />
             <h3>Tripleten Bug Jam 1</h3>
             <p class="muted">Collaborative bug hunt and learn.</p>
             <span class="btn-link">Open link ↗</span>
           </a>
-          <a class="bug-card" href="https://www.canva.com/design/DAGt1vci334/b5NN8kkXHdwoxupY-stklQ/edit" target="_blank" rel="noreferrer">
-            <img src="/mnt/data/tech_images/hero-tech-1.png" alt="tech" />
+
+          <a class="bug-card" href="https://www.canva.com/design/DAGt1vci334/b5NN8kkXHdwoxupY-stklQ/edit" target="_blank" rel="noopener">
+            <img src="images/qa-dashboard-1.jpg" alt="Bug Jam 2 — testing dashboard" />
             <h3>Tripleten Bug Jam 2</h3>
             <p class="muted">Iteration on issues and patterns.</p>
             <span class="btn-link">Open link ↗</span>
           </a>
-          <a class="bug-card" href="https://www.canva.com/design/DAGfyM17el4/eXWwu09anyB0mfto7kEqmQ/edit" target="_blank" rel="noreferrer">
-            <img src="/mnt/data/tech_images/bugjam-3.png" alt="tech" />
+
+          <a class="bug-card" href="https://www.canva.com/design/DAGfyM17el4/eXWwu09anyB0mfto7kEqmQ/edit" target="_blank" rel="noopener">
+            <img src="images/qa-ci-1.jpg" alt="Bug Jam 3 — CI/CD pipeline" />
             <h3>Tripleten Bug Jam 3</h3>
             <p class="muted">Deeper dives and teamwork.</p>
             <span class="btn-link">Open link ↗</span>
           </a>
-          <a class="bug-card" href="https://www.canva.com/design/DAGjD4GkKWs/3RaQCWsAUkUAKALTND0ttg/edit" target="_blank" rel="noreferrer">
-            <img src="/mnt/data/tech_images/bugjam-4.png" alt="tech" />
+
+          <a class="bug-card" href="https://www.canva.com/design/DAGjD4GkKWs/3RaQCWsAUkUAKALTND0ttg/edit" target="_blank" rel="noopener">
+            <img src="images/qa-metrics-1.jpg" alt="Bug Jam 4 — quality metrics" />
             <h3>Tripleten Bug Jam 4</h3>
             <p class="muted">Complex issues and tracking.</p>
             <span class="btn-link">Open link ↗</span>
           </a>
-          <a class="bug-card" href="https://www.canva.com/design/DAGtMNG9OfU/RcZMaikR8y0fjAAtoihpYA/edit" target="_blank" rel="noreferrer">
-            <img src="/mnt/data/tech_images/hero-tech-2.png" alt="tech" />
+
+          <a class="bug-card" href="https://www.canva.com/design/DAGtMNG9OfU/RcZMaikR8y0fjAAtoihpYA/edit" target="_blank" rel="noopener">
+            <img src="images/qa-dashboard-2.jpg" alt="Bug Jam 5 — coverage dashboard" />
             <h3>Tripleten Bug Jam 5</h3>
             <p class="muted">Sharpen QA strategy in practice.</p>
             <span class="btn-link">Open link ↗</span>
           </a>
-          <a class="bug-card" href="https://www.canva.com/design/DAGik9LQEKo/lcMBQhDx3G3UECV2iG_Xow/edit" target="_blank" rel="noreferrer">
-            <img src="/mnt/data/tech_images/bugjam-4.png" alt="tech" />
+
+          <a class="bug-card" href="https://www.canva.com/design/DAGik9LQEKo/lcMBQhDx3G3UECV2iG_Xow/edit" target="_blank" rel="noopener">
+            <img src="images/qa-hero-2.jpg" alt="Bug Jam 6 — process highlight" />
             <h3>Tripleten Bug Jam 6</h3>
             <p class="muted">Showcase growth in detection.</p>
             <span class="btn-link">Open link ↗</span>
@@ -238,22 +236,21 @@
 
     <div class="spacer"></div>
 
-    <!-- About Me (your uploaded photo only) -->
+    <!-- About Me -->
     <section id="about" class="section">
       <div class="card">
         <div class="stack">
-          <img class="avatar" src="images/avatar.png" alt="Cara profile photo" />
-
+          <img class="avatar" src="images/about-me.png" alt="Cara C Cross — QA Engineer and creator of CaraQAway" />
           <div>
             <h2 class="h2">About Me</h2>
-            <p class="muted">I’m Cara, a QA Engineer who took the scenic route into tech. From years of landscaping to leading test automation, I turned grit into growth. Through persistence and curiosity, I transitioned careers and now uplift others — especially women and career‑changers — who are rewriting their stories in technology.</p>
+            <p class="muted">I’m Cara, a QA Engineer who took the scenic route into tech. From years of landscaping to leading test automation, I turned grit into growth. Through persistence and curiosity, I transitioned careers and now uplift others — especially women and career-changers — who are rewriting their stories in technology.</p>
           </div>
         </div>
         <div class="spacer"></div>
         <div class="grid-3 gallery">
-          <img src="images/hero-tech-1.jpg" alt="tech gallery" />
-          <img src="images/hero-tech-2.jpg" alt="tech gallery" />
-          <img src="/mnt/data/tech_images/bugjam-1.png" alt="tech gallery" />
+          <img src="images/qa-hero-1.jpg" alt="tech gallery" />
+          <img src="images/qa-hero-3.jpg" alt="tech gallery" />
+          <img src="images/qa-dashboard-1.jpg" alt="tech gallery" />
         </div>
       </div>
     </section>
@@ -272,11 +269,8 @@
     <a href="#types">types</a>
     <a href="#externship">externship</a>
     <a href="#bugjam">bugjam</a>
-    <a href="#inspiratio<a href="https://export-download.canva.com/VQdQw/DAGqubVQdQw/173/0-2551771076079144635.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251018%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251018T230435Z&X-Amz-Expires=90016&X-Amz-Signature=2b22a892579bedf52c1e7fda16f494539ab64c4696eefc83abb01072aebb8254&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27EX14%2520Runestone%2520Academy%2520Final%2520Presentation.pdf&response-expires=Mon%2C%2020%20Oct%202025%2000%3A04%3A51%20GMT" target="_blank" rel="noopener">
-  externship presentation
-</a>
-
-
+    <a href="#inspiration">inspiration</a>
+    <a href="#about">about</a>
   </nav>
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
