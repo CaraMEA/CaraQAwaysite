@@ -253,11 +253,36 @@
           </div>
         </div>
         <div class="spacer"></div>
-        <div class="grid-3 gallery">
-          <img src="/public/images/qa-hero-1.jpg" alt="QA hero 1" />
-          <img src="/public/images/qa-hero-3.jpg" alt="QA hero 3" />
-          <img src="/public/images/qa-dashboard-1.jpg" alt="QA dashboard" />
-        </div>
+<div class="grid-3 gallery">
+  <img src="/images/qa-hero-1.jpg" alt="tech gallery" onerror="swapExt(this)" />
+  <img src="/images/qa-hero-3.jpg" alt="tech gallery" onerror="swapExt(this)" />
+  <img src="/images/qa-dashboard-1.jpg" alt="tech gallery" onerror="swapExt(this)" />
+</div>
+
+<script>
+  function swapExt(img) {
+    const order = img.dataset.order ? JSON.parse(img.dataset.order) : ["jpeg","JPG","png"];
+    let idx = +(img.dataset.idx || 0);
+    const u = new URL(img.src);
+    const base = u.pathname.replace(/\.[^.]+$/, ""); // strip current extension
+
+    if (idx >= order.length) {
+      // last resort placeholder so layout stays pretty
+      img.onerror = null;
+      img.src = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80";
+      return;
+    }
+
+    u.pathname = `${base}.${order[idx]}`;
+    img.dataset.idx = idx + 1;
+    img.dataset.order = JSON.stringify(order);
+    img.onerror = () => swapExt(img);
+    img.src = u.toString();
+  }
+</script>
+
+     
+
       </div>
     </section>
 
